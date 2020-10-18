@@ -10,6 +10,8 @@
 
 </head>
   <body>
+	  
+	  <h3>Harsit Style</h3>
   <input id="topicName" name="topicName" type="text" placeholder="Enter Topic here"/>
   <br/>
   <textarea id="InputText" cols="30" rows="4">Enter text here</textarea>
@@ -97,7 +99,12 @@
 		
 		//No of words Final
 		noOfWordsFinal = str1.split(' ').length;
-		
+		noOfScreenShots = document.getElementById("numberOfScreenShots").value;
+			
+			//Subtract scs due to my style
+			if(noOfWordsFinal>noOfScreenShots){
+				noOfWordsFinal = noOfWordsFinal- noOfScreenShots;
+			}
 		document.getElementById("noofwords").value = noOfWordsFinal;
 		
 		//Word cal
@@ -110,7 +117,7 @@
 		
 		//ScreenShots cal
 		pricePerScreenShots = document.getElementById("pricePerScreenShots").value;
-		noOfScreenShots = document.getElementById("numberOfScreenShots").value;
+		
 		finalPriceScrenshots = pricePerScreenShots*noOfScreenShots;
 		
 		//Final Price
